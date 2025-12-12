@@ -1,0 +1,11 @@
+name: Swlf Hosted Test 
+
+on: push
+
+jobs:
+  test:
+    runs-on: self-hosted 
+
+    steps:
+      - name: print from self hosted 
+        run: echo "Hello Arihant This Running on you Machine"

@@ -1,0 +1,12 @@
+name: Main Branch Workflow 
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  mainjob:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This is Run Only on Main Branch"

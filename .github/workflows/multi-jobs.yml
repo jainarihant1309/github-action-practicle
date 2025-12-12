@@ -1,0 +1,28 @@
+name: Multi Job Workflow
+
+on:
+  push:
+
+jobs:
+
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Print message
+        run: echo "Hello from Job 1 by Arihant"
+
+  job2:
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
+      - name: Print message
+        run: echo "Job 1 ke complete hone ke baad chal raha hoon - Job 2"
+
+  job3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print message
+        run: echo "Main Job 1 aur Job 2 se parallel chal raha hoon - Job 3"

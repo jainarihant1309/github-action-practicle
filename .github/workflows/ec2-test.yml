@@ -1,0 +1,11 @@
+name: EC2 Runner Test
+
+on: push
+
+jobs:
+  test:
+    runs-on: self-hosted
+    
+    steps:
+      - name: Print from EC2
+        run: echo "Hello Arihant! Workflow EC2 instance par run ho raha hai!"
